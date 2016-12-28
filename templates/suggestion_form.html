@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}Suggest an idea!{% endblock %}  # this page's basic structure was directly copies from home.html
+
+{% block content %}
+    <div class="row">
+        <form action="" method="POST">
+            {{  form.as_p  }}   <!-- submit back to itself -->
+            {% csrf_token %}   <!-- prevents people from copying info via a secondary source by submitting a cookie -->
+            <input type="submit">
+        </form>
+    </div>
+{% endblock %}
